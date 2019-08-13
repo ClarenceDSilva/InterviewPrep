@@ -1,3 +1,4 @@
+package com.neu.learn;
 public class LongestCommonPrefix {
 
 	 public static String longestCommonPrefix(String[] strs) {
