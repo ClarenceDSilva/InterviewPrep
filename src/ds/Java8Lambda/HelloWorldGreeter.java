@@ -1,4 +1,4 @@
-
+package ds.Java8Lambda;
 public class HelloWorldGreeter implements Greeting{
 
 	@Override

@@ -1,3 +1,4 @@
+package ds.Java8Lambda;
 public class LambdaDemo {
 	//Using an Interface to print HelloWorld (Polymorphism)
 	
