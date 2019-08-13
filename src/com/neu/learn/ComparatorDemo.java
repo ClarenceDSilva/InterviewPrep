@@ -22,7 +22,7 @@ public class ComparatorDemo {
 		for(ComparableDemo movie: movieList) {
 			 System.out.println(movie.getRating() + " " + 
                      movie.getName() + " " + 
-                     movie.getYear()); 
+                     movie.getYear());
 		}
 	}
 	 }
