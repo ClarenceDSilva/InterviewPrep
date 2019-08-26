@@ -30,7 +30,7 @@ public class Knapsack_01 {
 		int wt[] = {1, 3, 4, 5};
 		int limit = 7;
 		int result = knapsack(val, wt, limit);
-		System.out.println("Total value of items in the Knapsack are: "+result);
+		System.out.println("Total VALUE of items in the Knapsack close to the WT are: "+result);
 	}
 
 }
