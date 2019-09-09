@@ -1,6 +1,8 @@
- package com.neu.learn;
+ package ds.tree;
 
 /*Program to count the number of leaf nodes of a tree*/
+ 
+// Defining a TreeNode DS
 class TreeNode{
 	int data;
 	TreeNode left;
@@ -23,7 +25,7 @@ public class CountLeafNodes {
 		// If Node is null
 		if(node == null)
 			return 0;
-		// If only one node is present
+		// If node is a leaf node, add as 1
 		if(node.left == null && node.right == null)
 			return 1;
 		else
