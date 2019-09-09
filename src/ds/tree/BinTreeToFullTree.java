@@ -2,18 +2,8 @@ package ds.tree;
 
 /*Question: Convert binary tree to full tree by removing half nodes*/
 
-//Data structure to store a Binary Tree node
-class Node
-{
-	int data;
-	Node left = null, right = null;
-
-	Node(int data) {
-		this.data = data;
-	}
-}
 public class BinTreeToFullTree {
-	// Function to perform inorder traversal of the tree after removing all the half nodes
+	// Function to perform in order traversal of the tree after removing all the half nodes
 	public static void inorder(Node root)
 	{
 		if (root == null) {

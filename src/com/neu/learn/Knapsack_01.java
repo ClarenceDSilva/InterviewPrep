@@ -8,7 +8,7 @@ public class Knapsack_01 {
 		
 		for(int i = 0; i <= val.length; i++) {
 			for(int j = 0; j <= limit; j++) {
-				//1st column will be all 0 since if there is no min. wt, nothing can be added into the knapsack
+				//If either the wt or the val is 0 means that we cannot add anything to the knapsack
 				if(i == 0 || j == 0) {
 					dp[i][j] = 0;
 					continue;
