@@ -43,5 +43,4 @@ public class BestMeetingPoint {
 	 
 	    return sum;
 	}
-	
 }
