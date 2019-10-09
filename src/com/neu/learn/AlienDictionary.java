@@ -1,6 +1,6 @@
 package com.neu.learn;
 
-/*Leetcode Problem #269: Alien Dictionary
+/*GeeksforGeeks: Alien Dictionary
  * Using Topological Sort*/
 
 import java.util.LinkedList;

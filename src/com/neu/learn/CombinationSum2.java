@@ -16,7 +16,6 @@ public class CombinationSum2 {
 		Arrays.sort(candidates);
 		findCombinations(candidates, 0, target, new ArrayList<Integer>(), result);
 		return result;
-		
 	}
 	
 	public static void findCombinations(int[] candidates, int index, int target, List<Integer> current, List<List<Integer>> result) {
@@ -40,7 +39,6 @@ public class CombinationSum2 {
 				current.remove(current.size() - 1);
 			}
 		}
-		
 	}
 	public static void main(String[] args) {
 		int[] candidates = {10, 1, 2, 7, 6, 1, 5};
@@ -48,5 +46,4 @@ public class CombinationSum2 {
 		List<List<Integer>> result = combinationSum2(candidates, target);
 		System.out.println(result);
 	}
-
 }

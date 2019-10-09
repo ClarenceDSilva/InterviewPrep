@@ -4,14 +4,14 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-/*Leetcode #56:Merge Intervals
- *Given a collection of intervals, merge all overlapping intervals.
+/* Leetcode #56:Merge Intervals
+ * Given a collection of intervals, merge all overlapping intervals.
  * */
 public class MergeIntervals {
 	public static int[][] merge(int[][] intervals){
 		if(intervals == null || intervals.length == 0) {
 			return intervals;
-		}
+		}      
 		//Sorting the intervals based on their start time
 		Arrays.sort(intervals, (a,b) -> a[0] - b[0]);
 		//Arrays.sort(intervals, (a,b) -> Integer.compare(a[0] - b[0]));
