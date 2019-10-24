@@ -28,7 +28,7 @@ public class AlienDictionary_Leetcode {
 		//Comparing each word by its previous word char by char
 		// If different. Since c1 is before c2: Hence c1->c2
 		for(int i = 0; i < words.length - 1; i++) {
-			String curr = words[i];
+			String curr = words[i]; 
 			String next = words[i + 1];
 			
 			//Using the shorter word for iteration purposes
@@ -55,7 +55,6 @@ public class AlienDictionary_Leetcode {
 		//Iterating over the graph and checking if the size of a particular set is 0
 		// i.e. the node has no incoming edge, i.e. it has no dependency
 		for(Map.Entry<Character, Set<Character>> entry: map.entrySet()) {
-			//System.out.println(entry.getValue().size());
 			if(entry.getValue().size() == 0) {
 				// Add that node to the queue
 				queue.offer(entry.getKey());
