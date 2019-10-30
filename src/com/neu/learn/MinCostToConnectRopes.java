@@ -1,6 +1,6 @@
 package com.neu.learn;
 
-/* Leetcode #1167 : Minimum Cost to Connect Sticks
+/* Leetcode #1167 : Minimum Cost to Connect Ropes/Sticks
  * 
  * Given n ropes of different lengths, we need to connect these ropes into one rope. 
  * We can connect only 2 ropes at a time. The cost required to connect 2 ropes is equal to sum of their lengths.
