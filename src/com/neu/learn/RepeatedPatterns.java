@@ -31,12 +31,12 @@ public class RepeatedPatterns {
 					i = i + patternLen;
 				}else {
 					numOfInstructions++;
-					pattern.append(instructions.charAt(i));
+					pattern.append(current);
 					i++;
 				}
 			}else {
 				//Case where the pattern is not present
-				pattern.append(instructions.charAt(i));
+				pattern.append(current);
 				numOfInstructions++;
 				i++;
 			}
