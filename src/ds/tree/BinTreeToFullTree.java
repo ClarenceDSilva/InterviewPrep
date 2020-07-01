@@ -1,6 +1,6 @@
 package ds.tree;
 
-/*Question: Convert binary tree to full tree by removing half nodes*/
+/*Question: Convert a binary tree to full tree by removing half nodes*/
 
 public class BinTreeToFullTree {
 	// Function to perform in order traversal of the tree after removing all the half nodes
