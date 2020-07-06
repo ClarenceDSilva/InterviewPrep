@@ -1,4 +1,4 @@
-# Interview Prep Questions
-Features leetcode and other Data-Structures and algorithm problems asked for interviews
+# Interview Prep Questions and Solutions
+Features leetcode and other Data-Structures and algorithm problems commonly asked for interviews and the ones which I have encountered during mine
 
-## Solutions are coded in Java
+## All solutions are coded in Java
