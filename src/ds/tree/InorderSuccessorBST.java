@@ -3,33 +3,52 @@ package ds.tree;
 /*Leetcode #285: Inorder Successor in a BST */
 public class InorderSuccessorBST {
 	
-	public static Node inorderSuccessor(Node root, Node x) {
-		if(root == null) {
+	public Node getSuccessor(Node root, int data){
+		Node current = find(root, data);
+		if(current == null){
 			return null;
 		}
-		Node next = null;
-		Node p = root;
-		while(x != null && p.data != x.data) {
-			if(p.data > x.data) {
-				//Move left
-				next = p;
-				p = p.left;
-			}else {
-				p = p.right;
+		if(current.right != null){ // Case1: Node has a right subtree
+			return findMin(current.right);
+		}else{
+			//Case2: Node has no right subtree
+			Node successor = null;
+			Node ancestor = root;
+			while(ancestor != current){
+				if(current.data <  ancestor.data){
+					successor = ancestor; // So far, this is the deepest node for which the current node is at left
+					ancestor = ancestor.left;
+				}else{
+					ancestor = ancestor.right;
+				}
+				return successor;
 			}
 		}
-		if(p == null) {
+		return null;
+	}
+
+	//Function to find some data in the tree
+	public Node find(Node root, int data){
+		if(root == null){
+			return null;
+		}else if(root.data == data){
+			return root;
+		}else if(root.data < data){
+			return find(root.right, data);
+		}else{
+			return find(root.left, data);
+		}
+	}
+
+	// Function to find min value in BST
+	public Node findMin(Node root){
+		if(root == null){
 			return null;
 		}
-		if(p.right == null) {
-			return next;
+		while(root.left != null){
+			root = root.left;
 		}
-		p = p.right;
-		//While there is still left nodes to traverse
-		while(p.left != null) {
-			p = p.left;
-		}
-		return p;
+		return root;
 	}
 	
 	public static void main(String[] args) {
@@ -50,12 +69,14 @@ public class InorderSuccessorBST {
 	root.left = new Node(3);
 	root.right = new Node(20);
 	root.right.left = new Node(15);
-	Node x = root.right.right = new Node(25);
+	root.right.right = new Node(25);
 	root.right.left.left = new Node(10);
 	root.right.left.right = new Node(17);
 	root.right.right.right  = new Node(30);
 	
-	Node result = inorderSuccessor(root, x);
-	System.out.println("Inorder successor of "+ x.data + " is " + result.data);
+	InorderSuccessorBST iSuccessor = new InorderSuccessorBST();
+	Node result = iSuccessor.getSuccessor(root, 25);
+	int res = result == null ? Integer.MIN_VALUE : result.data;
+	System.out.println("Inorder successor of "+ 25 + " is " + res);
 	}
 }
