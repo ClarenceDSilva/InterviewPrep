@@ -17,8 +17,8 @@ class Tree{
 	
 	Tree(String data, int leaf, int nonLeaf) {
 		this.data = data;
-		this.leaf = 0;
-		this.nonLeaf = 0;
+		this.leaf = leaf;
+		this.nonLeaf = nonLeaf;
 	}
 }
 
