@@ -32,10 +32,8 @@ public class ParenthesisTree {
 		if(t1.leaf < 0 || t2.leaf < 0 || t1.nonLeaf < 0 || t2.nonLeaf < 0) {
 			return false;
 		}
-		if(t1.leaf == t2.leaf && t1.nonLeaf == t2.nonLeaf) {
-			return true;
-		}
-		return false;
+		
+		return (t1.leaf == t2.leaf) && (t1.nonLeaf == t2.nonLeaf);
 	}
 	
 	public void countLeafNonleafNodes(Tree tree) {
@@ -61,8 +59,8 @@ public class ParenthesisTree {
 		}
 	}
 	public static void main(String[] args) {
-		String tree1 = "(())()";
-		String tree2 = "()(())";
+		String tree1 = "((()))()";
+		String tree2 = "(())(())";
 		ParenthesisTree pt = new ParenthesisTree();
 		boolean result = pt.areTreesEqual(tree1, tree2);
 		System.out.println(result);

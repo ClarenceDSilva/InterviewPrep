@@ -2,6 +2,7 @@ package com.neu.learn;
 
 import java.util.HashMap;
 import java.util.Map;
+import java.util.PriorityQueue;
 import java.util.TreeMap;
 
 /*Question: A hotel manager has to process N bookings of rooms for the next season.
@@ -56,8 +57,8 @@ public class PossibleHotelBookings {
 		return true;
 	}
 	public static void main(String[] args) {
-		int[] arrivals = {1, 3, 5};
-		int [] departures = {2, 4, 10};
+		int[] arrivals = {1, 2, 5};
+		int [] departures = {2, 6, 10};
 		int k = 1;
 		
 		boolean result = hotelBookings(arrivals, departures, k);

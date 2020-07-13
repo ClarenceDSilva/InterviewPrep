@@ -22,7 +22,7 @@ public class RepeatedPatterns {
 		while(i < instructionLen) {
 			char current = instructions.charAt(i);
 			
-			//Case where the coming instructions are present in the pattern
+			//Case where the incoming instructions are present in the pattern
 			if(pattern.toString().contains(Character.toString(current))){
 				int patternLen = pattern.length();
 				if((i + patternLen - 1) <= instructionLen && pattern.toString().equals(instructions.substring(i, i + patternLen))){
