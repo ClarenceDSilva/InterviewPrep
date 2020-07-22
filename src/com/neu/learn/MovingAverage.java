@@ -14,7 +14,6 @@ public class MovingAverage {
 		maxSize = size;
 		sum = 0.0; 
 	}
-	
 	public double next(int val) {
 		if(queue.size() == maxSize) {
 			// When queue if full, remove the 1st element and update the sum
@@ -31,8 +30,5 @@ public class MovingAverage {
 		mv.next(2);
 		double result = mv.next(7);
 		System.out.println("After adding 7: "+ result);
-		
-		
 	}
-
 }

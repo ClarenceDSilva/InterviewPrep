@@ -18,7 +18,7 @@ public class AlienDictionary_Leetcode {
 		Map<Character, Set<Character>> map = new HashMap<>();
 		StringBuilder result = new StringBuilder();
 		
-		//Creating a graph out of the array of words(Adjacency List)
+		//Creating a graph out of the array of words(Adjacency Matrix)
 		for(String s : words) {
 			for(char c : s.toCharArray()) {
 				map.put(c, new HashSet<Character>());
@@ -53,7 +53,7 @@ public class AlienDictionary_Leetcode {
 		Queue<Character> queue = new LinkedList<>();
 		
 		//Iterating over the graph and checking if the size of a particular set is 0
-		// i.e. the node has no incoming edge, i.e. it has no dependency
+		// i.e. the node has no out-going edge, i.e. it has no prerequisites
 		for(Map.Entry<Character, Set<Character>> entry: map.entrySet()) {
 			if(entry.getValue().size() == 0) {
 				// Add that node to the queue
