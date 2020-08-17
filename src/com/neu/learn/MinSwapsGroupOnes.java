@@ -1,7 +1,10 @@
 package com.neu.learn;
 
+/*Leetcode #1151: Minimum Swaps to Group All 1's Together:
+ *Description: Given a binary array data, return the minimum number of
+ * swaps required to group all 1’s present in the array together in any place in the array
+ */
 public class MinSwapsGroupOnes {
-
 	public static int minSwaps(int[] data) {
 		// Calculate windowSize
 		int windowSize = 0;
@@ -13,7 +16,6 @@ public class MinSwapsGroupOnes {
 		if (windowSize <= 1) {
 			return 0;
 		}
-
 		int i = 0;
 		int j = i + (windowSize - 1);
 		int minSwaps = computeInitialWindowZeros(data, i++, j++, 0);
