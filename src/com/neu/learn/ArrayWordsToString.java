@@ -15,13 +15,10 @@ public class ArrayWordsToString {
 		//Iterating over the sub-words
 		for(String s : subWords) {
 			for(char c : s.toCharArray()) {
-				if(!map.containsKey(c)) {
-					return false;
-				}else if(map.get(c) == 0) {
-					return false;
-				}else{
+				if(map.containsKey(c) && map.get(c) > 0) {
 					map.put(c, map.get(c) - 1);
-					//System.out.println("KEY-> "+ c +" COUNT-> "+map.get(c));
+				}else{
+					return false;
 				}
 			}
 		}
