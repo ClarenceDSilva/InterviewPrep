@@ -17,18 +17,16 @@ public class ArrayWordsToString {
 			for(char c : s.toCharArray()) {
 				if(map.containsKey(c) && map.get(c) > 0) {
 					map.put(c, map.get(c) - 1);
+					if(map.get(c) == 0) {
+						map.remove(c);
+					}
 				}else{
 					return false;
 				}
 			}
 		}
-		for(char c : map.keySet()) {
-			if(map.get(c) > 0) {
-				return false;
-			}
-		}
 		
-		return true;
+		return map.size() == 0;
 	}
 	public static void main(String[] args) {
 		String word = "Justin Bieber";
